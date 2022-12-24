@@ -1,0 +1,3 @@
+env/
+merchex/db.sqlite3
+merchex/manage.py
