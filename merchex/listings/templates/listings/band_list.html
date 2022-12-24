@@ -1,0 +1,21 @@
+
+{% extends 'listings/base.html' %}
+
+{% block content %}
+
+<h1>Hello Django !</h1>
+
+<p>Mes groupes préférés sont :</p>
+
+<ul>
+    {% for band in bands %}
+        <li>
+            <a href="{% url 'band-detail' band.id %}">
+                {{ band.name }}
+            </a>
+            <a href="{% url 'band-update' band.id %}">[modifier]</a>
+            <a href="{% url 'band-delete' band.id %}">Supprimer ce groupe</a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
